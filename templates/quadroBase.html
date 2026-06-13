@@ -4,17 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nome do Quadro - {{ section_title }}</title>
+        <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body class="bg-slate-100">
+<body class="bg-slate-100 flex flex-col h-screen">
 
     <!-- Header  -->
-    <header class="bg-slate-100 flex items-center gap-4 p-8">
+    <header class="bg-slate-100 flex items-center gap-4 p-8 basis-30">
         <a class="text-3xl" href="/quadros">Nome do quadro</a>
         <p class="text-xl">-</p>
         <h3 class="text-xl">{{ section_title }}</h3>
     </header>
-    <main class="flex ">
+    <main class="grow flex">
         <aside class="bg-slate-100 basis-60 flex justify-end pe-4">
             <nav class="flex flex-col">
                 <a href="/quadros/quadro" 
