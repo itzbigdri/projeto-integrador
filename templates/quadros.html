@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="h-screen flex flex-col items-center">
+    <header class="max-w-4xl w-9/10 py-8">
+        <h1 class="text-4xl font-bold">Seja bem-vindo, Lorem Ipsum</h1>
+    </header>
+    <main class="max-w-4xl w-9/10">
+        <section class="mb-8">
+            <h1 class="text-xl mb-2">Meus quadros</h1>
+            <div class="h-[1px] w-full bg-slate-200 mb-2"></div>
+            <div class="flex gap-4">
+                <article class="max-w-2xs grow rounded-lg border border-slate-200 overflow-hidden cursor-pointer" onclick="window.location.href='/quadros/quadro'">
+                    <div class="aspect-video bg-slate-200"></div>
+                    <div class="p-4">
+                        <p class="text-xl font-medium">Nome do quadro</p>
+                        <p>Lorem Ipsum</p>
+                    </div>
+                </article>
+                <article class="cursor-pointer max-w-2xs grow rounded-lg border border-slate-200 overflow-hidden flex flex-col items-center justify-center">
+                    <span class="text-6xl text-slate-500">+</span>
+                    <p class="text-lg text-slate-500">Novo quadro</p>
+                </article>
+            </div>
+        </section>
+        <section>
+            <h1 class="text-xl mb-2">Quadros compartilhados comigo</h1>
+            <div class="h-[1px] w-full bg-slate-200 mb-2"></div>
+            <div class="flex gap-4">
+                <p>Nenhum quadro compartilhado</p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
