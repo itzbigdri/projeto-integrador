@@ -7,30 +7,30 @@
         <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body class="bg-slate-100 flex flex-col h-screen">
+<body class="bg-slate-100 flex flex-col max-h-screen h-auto overflow-hidden">
 
     <!-- Header  -->
-    <header class="bg-slate-100 flex items-center gap-4 p-8 basis-30">
+    <header class="bg-slate-100 flex items-center gap-4 p-8 min-h-30">
         <a class="text-3xl" href="/quadros">Nome do quadro</a>
         <p class="text-xl">-</p>
         <h3 class="text-xl">{{ section_title }}</h3>
     </header>
-    <main class="grow flex">
+    <main class="h-screen flex">
         <aside class="bg-slate-100 basis-60 flex justify-end pe-4">
-            <nav class="flex flex-col">
-                <a href="/quadros/quadro" 
+            <nav class="flex flex-col gap-2">
+                <a href="/quadros/quadro"
                 class="px-8 py-4 rounded-full {% if secao==1 %}bg-slate-200 hover:bg-slate-300{% else %}hover:bg-slate-200{% endif %}">Início</a>
-                <a href="/quadros/quadro/gastos" 
+                <a href="/quadros/quadro/gastos"
                 class="px-8 py-4 rounded-full {% if secao==2 %}bg-slate-200 hover:bg-slate-300{% else %}hover:bg-slate-200{% endif %}">Gastos</a>
-                <a href="/quadros/quadro/renda" 
+                <a href="/quadros/quadro/renda"
                 class="px-8 py-4 rounded-full {% if secao==3 %}bg-slate-200 hover:bg-slate-300{% else %}hover:bg-slate-200{% endif %}">Renda</a>
-                <a href="/quadros/quadro/membros" 
+                <a href="/quadros/quadro/membros"
                 class="px-8 py-4 rounded-full {% if secao==4 %}bg-slate-200 hover:bg-slate-300{% else %}hover:bg-slate-200{% endif %}">Membros</a>
-                <a href="/quadros/quadro/configuracoes" 
+                <a href="/quadros/quadro/configuracoes"
                 class="px-8 py-4 rounded-full {% if secao==5 %}bg-slate-200 hover:bg-slate-300{% else %}hover:bg-slate-200{% endif %}">Configurações</a>
             </nav>
         </aside>
-        <section class="bg-white rounded-tl-xl grow-1 ps-16 pt-16">
+        <section class="bg-white rounded-tl-xl grow-1 px-16 pt-16 max-h-screen overflow-y-auto">
             {% block content %}
             {% endblock %}
         </section>
