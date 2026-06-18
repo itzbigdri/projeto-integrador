@@ -21,26 +21,16 @@
                                 <th class="py-4 px-8">Tipo de gasto</th>
                                 <th class="py-4 px-8">Valor</th>
                             </tr>
-                            <tr class="border border-slate-200">
-                                <td class="py-4 px-8">Roberto Gonçalves</td>
-                                <td class="py-4 px-8">Academia</td>
-                                <td class="py-4 px-8 text-red-500 font-bold">R$ 240</td>
-                            </tr>
-                            <tr class="border border-slate-200">
-                                <td class="py-4 px-8">Larissa Sampaio</td>
-                                <td class="py-4 px-8">Netflix</td>
-                                <td class="py-4 px-8 text-red-500 font-bold">R$ 60</td>
-                            </tr>
-                            <tr class="border border-slate-200">
-                                <td class="py-4 px-8">Pedro Sampaio</td>
-                                <td class="py-4 px-8">Aluguel</td>
-                                <td class="py-4 px-8 text-red-500 font-bold">R$ 950</td>
-                            </tr>
-                            <tr class="border border-slate-200">
-                                <td class="py-4 px-8">Safira Silva</td>
-                                <td class="py-4 px-8">Ifood</td>
-                                <td class="py-4 px-8 text-red-500 font-bold">R$ 39</td>
-                            </tr>
+                            {% for user in users %}
+                                {% for gasto in user.gastos %}
+                                    <tr class="border border-slate-200">
+                                        <td class="py-4 px-8">{{user.nome}}</td>
+                                        <td class="py-4 px-8">{{gasto.tipo}}</td>
+                                        <td class="py-4 px-8 text-red-500 font-bold">R$ {{gasto.valor}}</td>
+                                    </tr>
+                                {% endfor %}
+                            {% endfor %}
+                           
                         </table>
                     </div>
                 </article>

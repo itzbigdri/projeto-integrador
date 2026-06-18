@@ -21,26 +21,15 @@
                                 <th class="py-4 px-8">Fonte de renda</th>
                                 <th class="py-4 px-8">Valor</th>
                             </tr>
+                            {% for user in users%}
+                            {% for renda in user.renda%}
                             <tr class="border border-slate-200">
-                                <td class="py-4 px-8">Safira Silva</td>
-                                <td class="py-4 px-8">Freelance</td>
-                                <td class="py-4 px-8 text-green-500 font-bold">R$ 320</td>
+                                <td class="py-4 px-8">{{user.nome}}</td>
+                                <td class="py-4 px-8">{{renda.fonte}}</td>
+                                <td class="py-4 px-8 text-green-500 font-bold">R$ {{renda.valor}}</td>
                             </tr>
-                            <tr class="border border-slate-200">
-                                <td class="py-4 px-8">Roberto Gonçalves </td>
-                                <td class="py-4 px-8">Salário</td>
-                                <td class="py-4 px-8 text-green-500 font-bold">R$ 2.700</td>
-                            </tr>
-                            <tr class="border border-slate-200">
-                                <td class="py-4 px-8">Pedro Sampaio</td>
-                                <td class="py-4 px-8">Horas extras</td>
-                                <td class="py-4 px-8 text-green-500 font-bold">R$ 220</td>
-                            </tr>
-                            <tr class="border border-slate-200">
-                                <td class="py-4 px-8">Larissa Sampaio</td>
-                                <td class="py-4 px-8">Serviço de Uber</td>
-                                <td class="py-4 px-8 text-green-500 font-bold">R$ 130</td>
-                            </tr>
+                            {% endfor%}
+                            {% endfor %}
                         </table>
                     </div>
                 </article>
